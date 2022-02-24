@@ -12,53 +12,53 @@
         tools:ignore="MissingConstraints">
 
         <TextView
-            android:id="@+id/firstname"
+            android:id="@+id/name"
             android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
-            android:text="Firstname:" />
+            android:text="Name:" />
 
         <TextView
-            android:id="@+id/tvFirstname"
+            android:id="@+id/tvName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignBottom="@+id/firstname"
+            android:layout_alignBottom="@+id/name"
             android:layout_alignParentEnd="true"
-            android:layout_toEndOf="@+id/firstname" />
+            android:layout_toEndOf="@+id/name" />
 
         <TextView
-            android:id="@+id/lastname"
+            android:id="@+id/phoneNumber"
             android:layout_width="100dp"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/firstname"
+            android:layout_below="@+id/name"
             android:layout_alignParentStart="true"
-            android:text="Lastname:" />
+            android:text="Phone Number:" />
 
         <TextView
-            android:id="@+id/tvLastname"
+            android:id="@+id/tvPhoneNumber"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignBottom="@+id/lastname"
+            android:layout_alignBottom="@+id/phoneNumber"
             android:layout_alignParentEnd="true"
-            android:layout_toEndOf="@+id/lastname" />
+            android:layout_toEndOf="@+id/phoneNumber" />
 
         <TextView
-            android:id="@+id/age"
+            android:id="@+id/replied"
             android:layout_width="100dp"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/lastname"
+            android:layout_below="@+id/phoneNumber"
             android:layout_alignParentStart="true"
-            android:text="Age:" />
+            android:text="Replied:" />
 
         <TextView
-            android:id="@+id/tvAge"
+            android:id="@+id/tvReplied"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_alignBottom="@+id/age"
+            android:layout_alignBottom="@+id/replied"
             android:layout_alignParentEnd="true"
-            android:layout_toEndOf="@+id/age" />
+            android:layout_toEndOf="@+id/replied" />
 
     </RelativeLayout>
 

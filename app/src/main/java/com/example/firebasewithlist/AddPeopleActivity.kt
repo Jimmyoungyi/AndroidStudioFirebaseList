@@ -18,18 +18,21 @@ class AddPeopleActivity : AppCompatActivity() {
         button.setOnClickListener {
 
             var fnT = fn.text.toString()
-            var lnT = ln.text.toString()
-            var ageN = age.text.toString().toInt()
-
-            var id = System.currentTimeMillis().toInt().toString()
+            var phoneNumberT = phoneNumber.text.toString()
 
             fn.text.clear()
-            ln.text.clear()
-            age.text.clear()
+            phoneNumber.text.clear()
 
-            database.child(id).setValue(People(fnT, lnT, ageN, id.toInt()))
-            val intent = Intent(this, PeopleListActivity::class.java)
-            startActivity(intent)
+            try{
+                database.child(phoneNumberT).setValue(People( fnT, "no replied", phoneNumberT.toLong() ) )
+            }catch (error: Exception){
+                print("error #1")
+                print(fnT)
+                print(phoneNumberT)
+                println(error)
+            }
+
+            finish()
         }
 
     }

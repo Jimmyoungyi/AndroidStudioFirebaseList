@@ -18,19 +18,17 @@ class PeopleActivity : AppCompatActivity() {
 
         val database = FirebaseDatabase.getInstance("https://fir-datatesting-85dcc-default-rtdb.firebaseio.com/").reference
 
-        val firstname = intent.getStringExtra("firstname")
-        val lastname = intent.getStringExtra("lastname")
-        val age = intent.getStringExtra("age")
-        val id = intent.getStringExtra("id")
+        val name = intent.getStringExtra("name")
+        val replied = intent.getStringExtra("replied")
+        val phoneNumber = intent.getStringExtra("phoneNumber")
 
-        binding.tvFirstname.text = firstname
-        binding.tvLastname.text = lastname
-        binding.tvage.text = age
+        binding.tvFirstname.text = name
+        binding.tvLastname.text = phoneNumber
+        binding.tvage.text = replied
 
         btnDelete.setOnClickListener {
-            database.child(id.toString()).removeValue()
-            val intent = Intent(this, PeopleListActivity::class.java)
-            startActivity(intent)
+            database.child(phoneNumber.toString()).removeValue()
+            finish()
         }
     }
 }

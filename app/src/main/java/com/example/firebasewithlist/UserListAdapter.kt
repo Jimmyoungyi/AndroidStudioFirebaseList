@@ -14,13 +14,13 @@ class UserListAdapter(private val context: Activity, private val arrayList: Arra
         val inflater: LayoutInflater = LayoutInflater.from(context)
         val view: View = inflater.inflate(R.layout.people_item, null)
 
-        val firstname = view.findViewById<TextView>(R.id.tvFirstname)
-        val lastname = view.findViewById<TextView>(R.id.tvLastname)
-        val age = view.findViewById<TextView>(R.id.tvAge)
+        val name = view.findViewById<TextView>(R.id.tvName)
+        val phoneNumber = view.findViewById<TextView>(R.id.tvPhoneNumber)
+        val replied = view.findViewById<TextView>(R.id.tvReplied)
 
-        firstname.text = arrayList[position].firstname
-        lastname.text = arrayList[position].lastname
-        age.text = arrayList[position].age.toString()
+        name.text = arrayList[position].name
+        phoneNumber.text = arrayList[position].phoneNumber.toString()
+        replied.text = arrayList[position].replied.toString()
 
         return view
     }

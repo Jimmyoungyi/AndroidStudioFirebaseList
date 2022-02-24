@@ -1,3 +1,5 @@
 package com.example.firebasedatatesting
 
-data class People (var firstname: String, var lastname: String, var age:Int, var id:Int)
+import java.math.BigInteger
+
+data class People (var name: String, var replied: String, var phoneNumber:Long)
