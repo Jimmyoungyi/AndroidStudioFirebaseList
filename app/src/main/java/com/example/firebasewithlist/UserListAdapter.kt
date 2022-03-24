@@ -20,7 +20,7 @@ class UserListAdapter(private val context: Activity, private val arrayList: Arra
 
         name.text = arrayList[position].name
         phoneNumber.text = arrayList[position].phoneNumber.toString()
-        replied.text = arrayList[position].replied.toString()
+        replied.text = arrayList[position].replied
 
         return view
     }

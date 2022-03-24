@@ -47,7 +47,9 @@ class PeopleListActivity : AppCompatActivity() {
                     val people = People(
                         i.child("name").getValue().toString(),
                         i.child("replied").getValue().toString(),
-                        i.child("phoneNumber").getValue().toString().toLong())
+                        i.child("phoneNumber").getValue().toString().toLong(),
+                        i.child("url").getValue().toString()
+                    )
                     userArrayList.add(people)
                 }
 
@@ -57,11 +59,14 @@ class PeopleListActivity : AppCompatActivity() {
                     val name = userArrayList[position].name
                     val replied = userArrayList[position].replied.toString()
                     val phoneNumber = userArrayList[position].phoneNumber.toString()
+                    val url = userArrayList[position].url.toString()
 
                     val i = Intent(this@PeopleListActivity, PeopleActivity::class.java)
                     i.putExtra("name", name)
                     i.putExtra("replied",replied)
                     i.putExtra("phoneNumber",phoneNumber)
+                    i.putExtra("url",url)
+
                     startActivity(i)
                 }
             }

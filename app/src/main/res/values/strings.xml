@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">FirebaseWithList</string>
+    <string name="phone_number">Phone Number:</string>
+    <string name="name">Name:</string>
+    <string name="replied">Replied:</string>
+    <string name="sent_message_to_all">Sent message to all</string>
 </resources>

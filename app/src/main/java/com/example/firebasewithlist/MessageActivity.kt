@@ -44,7 +44,9 @@ class MessageActivity : AppCompatActivity() {
                     val people = People(
                         i.child("name").getValue().toString(),
                         i.child("replied").getValue().toString(),
-                        i.child("phoneNumber").getValue().toString().toLong())
+                        i.child("phoneNumber").getValue().toString().toLong(),
+                        i.child("url").getValue().toString()
+                    )
                     userArrayList.add(people)
                 }
             }
